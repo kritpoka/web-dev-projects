@@ -3,7 +3,6 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/Logo (1).png';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
-import { HashLink } from 'react-router-hash-link';
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -53,9 +52,6 @@ export const NavBar = () => {
                 <a href="https://linktr.ee/veedii_team"><img src={navIcon2} alt="" /></a>
                 <a href="https://linktr.ee/veedii_team"><img src={navIcon3} alt="" /></a>
               </div>
-              <HashLink to='#comunity'>
-                <button className="vvd"><span>ชุมชน</span></button>
-              </HashLink>
             </span>
           </Navbar.Collapse>
         </Container>

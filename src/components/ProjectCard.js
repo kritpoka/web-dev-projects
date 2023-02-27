@@ -5,7 +5,7 @@ import React from "react";
 
 
 
-export const ProjectCard = ({ title, description, imgUrl , info, info2, info3, info4, info5, info6}) => {
+export const ProjectCard = ({ title, description, imgUrl , info, info1, info2, info3, info4, info5, info6, info7, info8, info9,}) => {
   const MyVerticallyCenteredModal = (props) => {
     return (
       <Modal
@@ -24,11 +24,15 @@ export const ProjectCard = ({ title, description, imgUrl , info, info2, info3, i
           <h4 className="pro-title">{title}</h4>
           <p className="pro-info">
             {info} <br/> <br/>
+            {info1} <br/> <br/>
             {info2} <br/> <br/>
             {info3} <br/> <br/>
             {info4} <br/> <br/>
             {info5} <br/> <br/>
-            {info6}
+            {info6} <br/> <br/>
+            {info7} <br/> <br/>
+            {info8} <br/> <br/>
+            {info9} <br/> <br/>
           </p>
         </Modal.Body>
         <Modal.Footer>

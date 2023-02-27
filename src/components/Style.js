@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import React from "react";
 import Card from 'react-bootstrap/Card';
+import Image from "react-bootstrap/Image";
 
 function MyVerticallyCenteredModal(props) {
 
@@ -39,20 +40,25 @@ function MyVerticallyCenteredModal(props) {
 
 // information element for discribe. 
 const elements = [
-  { 
-    title: 'one',
-    text: 'one', 
-    src: 'https://images.unsplash.com/photo-1672478865400-98ad5c821d75?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-  }, 
-  { 
-    title: 'two',
-    text: 'two',  
-    src: 'https://images.unsplash.com/photo-1671506754462-733659e476ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80',
-  }, 
-  { 
-    title: 'three',
-    text: 'three', 
-    src: 'https://images.unsplash.com/photo-1672134459730-99b01749b6ed?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  {
+    title: 'ห้องนอน',
+    text: 'bedroom',
+    src: 'https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  },
+  {
+    title: 'ห้องน้ำ',
+    text: 'bathroom',
+    src: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  },
+  {
+    title: 'ห้องครัว',
+    text: 'kitchen',
+    src: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
+  },
+  {
+    title: 'ห้องนั่งเล่น',
+    text: 'living room',
+    src: 'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
   }
 ];
 
@@ -93,15 +99,11 @@ export const Skills = () => {
                 {elements.map(({ title, text, src }, index) => {
                   return (
                     <div className="item" >
-                      <Card style={{ width: '18rem'}}>
+                      <Card style={{ width: '18rem' }}>
                         <Card.Body>
                           <Card.Title className='text-black'>{title}</Card.Title>
-                          <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                          <Card.Text>
-                            {text}
-                          </Card.Text>
-                          <Card.Link href="#">Card Link</Card.Link>
-                          <Card.Link href="#">Another Link</Card.Link>
+                          <Image className='' fluid="true" rounded="true" src={src}/>
+                          <Button className='mt-2 w-100' variant='dark' type='button' href='https://web-homeinspire.homepro.co.th/#//home'>สไตล์</Button>
                         </Card.Body>
                       </Card>
                       <MyVerticallyCenteredModal
@@ -111,7 +113,6 @@ export const Skills = () => {
                     </div>
                   )
                 })}
-
               </Carousel>
             </div>
           </div>
